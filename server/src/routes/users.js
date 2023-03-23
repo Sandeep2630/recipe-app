@@ -35,9 +35,9 @@ router.post("/login", async (req, res) => {
     return res.json({ message: "username or password invalid" });
   }
 
-  const token = jwt.sign({ id: user._id }, "secret");
+  const token = jwt.sign({ id: user._id, permission: "admin" }, "secret");
 
-  res.json({ token, userId: user._id });
+  res.json({ token, userId: user._id, roles: ["admin"] });
 });
 
 export { router as UserRouter };

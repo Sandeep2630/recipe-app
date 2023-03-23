@@ -8,10 +8,14 @@ app.use(cors());
 
 app.use("/auth", UserRouter);
 
-mongoose.connect(
-  "mongodb+srv://kaku26301:bikusabu007@cluster0.py7aolx.mongodb.net/Cluster0?retryWrites=true&w=majority"
-);
+mongoose
+  .connect(
+    "mongodb+srv://kaku26301:123qwe@newcluster.ajv8o10.mongodb.net/newCluster?retryWrites=true&w=majority"
+  )
+
+  .then((conn) => console.log(conn, ">>>>>>>>>>"))
+  .catch((error) => console.log(error, "jkkkkkkkkk"));
 
 app.listen(3500, () => {
-  console.log("server started");
+  console.log("server started at 8500");
 });

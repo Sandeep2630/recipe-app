@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "ra-data-local-forage": "^4.8.4"
+  }
+}
